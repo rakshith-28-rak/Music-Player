@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ searchQuery = "", setSearchQuery = () => {} }) => {
+
   const [IsOpen, setisOpen] = useState(false);
+
 
   return (
     <>
@@ -18,7 +20,18 @@ const Navbar = () => {
           <input
             className="focus-visible:outline-none p-2 w-[50vw]"
             type="text"
+          placeholder="Search songs, artists..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
           />
+          {searchQuery && (
+          <button 
+            onClick={() => setSearchQuery("")}
+            className="text-gray-500 hover:text-black px-2"
+          >
+            ✕
+          </button>
+        )}
         </div>
         <div>
           <Link to={"/signup"}>

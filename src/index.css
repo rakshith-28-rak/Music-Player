@@ -1,0 +1,9 @@
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add custom global styles below */
+body{
+    @apply bg-gray-900;
+}

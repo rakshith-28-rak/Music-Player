@@ -12,7 +12,6 @@ const Player = () => {
   console.log("Received song:", clickedSong);
   return (
     <>
-      <Navbar />
       <div className="w-full h-[87.6vh]  ">
         <div className="w-full  p-10 flex justify-around ">
           <div>

@@ -5,13 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 const AllSongs = ({ searchQuery = "" }) => {
   const navigate = useNavigate();
+  const filteredSongs = allSongs.filter(
+    (song) =>
+      song.track_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      song.artist.toLowerCase().includes(searchQuery.toLowerCase())
+  );
   const handleSongClick = (song) => {
-    const filteredSongs = allSongs.filter(
-      (song) =>
-        song.track_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        song.artist.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
     navigate("/player", {
       state: {
         song: {

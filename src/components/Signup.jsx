@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 const Signup = () => {
   return (
     <>
-    <Navbar />
       <div className="w-full h-[100vh] flex justify-center items-center">
         <div className=" w-[30vw] h-[85vh] bg-cyan-600 ">
           <div className="flex flex-col items-center">

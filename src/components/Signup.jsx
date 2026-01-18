@@ -34,10 +34,10 @@ const Signup = () => {
               className="w-80 h-10 focus:outline-none bg-transparent border-b-2 border-black font-mono"
               type="text"
             />
-          </div>
           <div className="w-full flex justify-center">
 
-          <button className="bg-white w-96 h-16 hover:bg-gray-900 hover:text-white">Sign up</button>
+          <button className="bg-white w-96 h-16 mt-2 rounded-3xl hover:bg-gray-900 hover:text-white">Sign up</button>
+          </div>
           </div>
         </div>
       </div>

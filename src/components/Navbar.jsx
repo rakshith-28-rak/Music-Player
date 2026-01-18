@@ -18,7 +18,7 @@ const Navbar = ({ searchQuery = "", setSearchQuery = () => {} }) => {
         <div className="bg-white w-fit h-fit p-1 font-semibold font-sans">
           <i className="fa-solid fa-magnifying-glass"></i>
           <input
-            className="focus-visible:outline-none p-2 w-[50vw]"
+            className="focus-visible:outline-none p-3  w-[500px]"
             type="text"
           placeholder="Search songs, artists..."
           value={searchQuery}
@@ -27,7 +27,7 @@ const Navbar = ({ searchQuery = "", setSearchQuery = () => {} }) => {
           {searchQuery && (
           <button 
             onClick={() => setSearchQuery("")}
-            className="text-gray-500 hover:text-black px-2"
+            className="text-gray-500 hover:text-black m-2"
           >
             ✕
           </button>
@@ -66,21 +66,23 @@ const Navbar = ({ searchQuery = "", setSearchQuery = () => {} }) => {
                 </h3>
               </Link>
               <Link to={"/allartist"}>
-                <h3 className="text-3xl cursor-pointer hover:text-cyan-600 transition-colors duration-200">
+                <h3 className="text-3xl cursor-pointer hover:text-cyan-600 transition-colors duration-200"
+                onClick={() => setisOpen(false)}>
                   All Artists
                 </h3>
               </Link>
               <Link to={"/allsongs"}>
-                <h3 className="text-3xl cursor-pointer hover:text-cyan-600 transition-colors duration-200">
+                <h3 className="text-3xl cursor-pointer hover:text-cyan-600 transition-colors duration-200"
+                onClick={() => setisOpen(false)}>
                   All Songs
                 </h3>
               </Link>
-              <h3 className="text-3xl cursor-pointer hover:text-cyan-600 transition-colors duration-200">
+              <Link to={"/profile"}>
+              <h3 className="text-3xl cursor-pointer hover:text-cyan-600 transition-colors duration-200"
+              onClick={() => setisOpen(false)}>
                 Profile
               </h3>
-              <h3 className="text-3xl cursor-pointer hover:text-cyan-600 transition-colors duration-200">
-                Settings
-              </h3>
+              </Link>
             </div>
           </div>
           {/* Add this style tag for the animation */}

@@ -8,6 +8,7 @@ import AllArtists from './components/AllArtists'
 import AllSongs from './components/AllSongs'
 import Signup from './components/Signup'
 import Navbar from './components/Navbar'
+import ProfilePage from './components/ProfilePage'
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -22,7 +23,9 @@ const App = () => {
         <Route path="/allartist" element={<AllArtists searchQuery={searchQuery} />} />
         <Route path="/allsongs" element={<AllSongs searchQuery={searchQuery} />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>   
+     
       {/* <AllArtists /> */}
       {/* <AllSongs /> */}
     {/* <Signup /> */}
